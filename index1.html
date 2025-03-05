@@ -12,40 +12,62 @@
                 margin: 0;
             }
             body {
-                background-image: url(img/IMG-20250228-WA0027.jpg);
+                background-image: url(img/istockphoto-1178373664-612x612.jpg);
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-position: center center;
                 background-size: cover;
             }
             a {
+                color: red;
                 text-decoration: none;
+            }
+            a:hover{
+                border-bottom: 2px solid tomato;
             }
             #abc {
                 margin: 65px;
                 padding: 5px;
                 border-radius: 40px;
-                background-color: aliceblue;
+                background-color: beige;
             }
             #abcd {
                 padding: 70px;
-                background-color: aqua;
+                background-color: navajowhite;
                 border-radius: 40px;
             }
             #abcde{
+                background-image: url(img/IMG-20250228-WA0027-removebg-preview.png);
+                background-size: 300px;
+                background-repeat: no-repeat;
+                background-position: center center;      
                 margin: 20px;
             }
             input[type = "submit"] {
+                color: white;
+                background-color: orange;
                 border-radius: 20px;
+                transition: 0.5ms;
+            }
+            input[type = "submit"]:hover {
+                background-color: darkorange;
+                box-shadow: 2px 2px 16px 2px orangered;
             }
             input[type="text"] {
                 border-radius: 20px;
-            }
-            input[type="email"] {
-                border-radius: 20px;
+                font-size: 21px;
             }
             input[type="password"] {
                 border-radius: 20px;
+                font-size: 21px;
+            }
+            input[type="text"]:focus {
+                background-color: aqua;
+                box-shadow: 2px 2px 8px 4px lime;
+            }
+            input[type="password"]:focus {
+                background-color: aqua;
+                box-shadow: 2px 2px 8px 4px lime;
             }
 
         </style>
@@ -56,25 +78,25 @@
                 <div class="col">
                     <ul class="nav nav-underline" style="position: relative; top: 10px; left: 170px;">
                         <li class="nav-item">
-                          <a class="nav-link" aria-current="page" href="#">HOME</a>
+                          <a class="nav-link" aria-current="page" href="#" style="color: maroon;">HOME</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">ABOUT US</a>
+                          <a class="nav-link" href="#" style="color: maroon;">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">CONTACT</a>
+                          <a class="nav-link" href="#" style="color: maroon;">CONTACT</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link active enabled" aria-disabled="true">LOG IN</a>
+                          <a class="nav-link active enabled" aria-disabled="true" style="color: chocolate;">LOG IN</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h1 style="position: absolute; bottom: 50px;"><b>Welcome Back!</b></h1>
+                    <h1 style="position: relative; top: 400px; color: maroon;"><b>Welcome Back!</b></h1>
                 </div>
             </div>
             <div class="col" id="abcd">
-                <h1 style="text-align: center;">Log in</h1><br>
+                <h1 style="text-align: center; color: maroon;"><b>Log in</b></h1><br>
                 <form action="">
                     <div class="form-group">
                         <input type="text" placeholder="Username" required maxlength="20" class="form-control"><br>
@@ -83,17 +105,17 @@
                     <div class="row" style="position: relative; left: 30px;">
                         <div class="col">
                             <input type="checkbox">
-                            <label for="">Remember Me</label>
+                            <label for="" style="color: red;">Remember Me</label>
                         </div>
                         <div class="col">
-                            <a href="">Forgot Password?</a>
+                            <a href="" style="position: relative; left: 50px;">Forgot Password?</a>
                         </div>
                     </div>
                     <br><br>
                     <input type="submit" value="Log in" class="form-control"><br>
               </form>
               <!-- <div class="row"><hr class="col"> or <hr class="col"></div> -->
-              <button class=" btn form-control btn-center btn-outline-secondary" style="border-radius: 20px;">Sign up</button>
+              <button class=" btn form-control btn-center btn-outline-danger" style="border-radius: 20px;">Sign up</button>
             </div>
         </div>
     </body>
