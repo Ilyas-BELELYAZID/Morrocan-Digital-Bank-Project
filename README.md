@@ -6,11 +6,11 @@
 <p><i>Projet réalisé dans le cadre d'un stage d'initiation au sein de l'Office National Des Aéroports (ONDA) - Aéroport Al Hoceima.</i></p>
 
 <p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Python-3.11%2B-blue.svg" alt="Python Version">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Framework-PySide6-orange.svg" alt="Framework">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Database-MySQL-blue.svg" alt="Database">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Protocol-Modbus_RTU-red.svg" alt="Protocol">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Architecture-MVC-green.svg" alt="Architecture">
+<img src="https://img.shields.io/badge/Python-3.11%2B-blue.svg" alt="Python Version">
+<img src="https://img.shields.io/badge/Framework-PySide6-orange.svg" alt="Framework">
+<img src="https://img.shields.io/badge/Database-MySQL-blue.svg" alt="Database">
+<img src="https://img.shields.io/badge/Protocol-Modbus_RTU-red.svg" alt="Protocol">
+<img src="https://img.shields.io/badge/Architecture-MVC-green.svg" alt="Architecture">
 </p>
 </div>
 
