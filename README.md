@@ -1,6 +1,6 @@
 # Morrocan-Digital-Bank-Project
 <div align="center">
-<img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/fr/thumb/c/c3/Office_national_des_a%25C3%25A9roports_logo.svg/1200px-Office_national_des_a%25C3%25A9roports_logo.svg.png" width="150"/>
+<img src="=https://upload.wikimedia.org/wikipedia/fr/thumb/c/c3/Office_national_des_a%25C3%25A9roports_logo.svg/1200px-Office_national_des_a%25C3%25A9roports_logo.svg.png" width="150"/>
 <h1>Application de Supervision des Équipements <abbr title="Very High Frequency">VHF</abbr></h1>
 <p>Une solution de monitoring et de configuration à distance pour les infrastructures de communication aéronautique.</p>
 <p><i>Projet réalisé dans le cadre d'un stage d'initiation au sein de l'Office National Des Aéroports (ONDA) - Aéroport Al Hoceima.</i></p>
@@ -15,7 +15,7 @@
 </div>
 
 # CONTEXTE DU PROJET
-> Ce projet s'inscrit dans une démarche de modernisation des outils de maintenance du **Service Technique Navigation** de l'aéroport d'Al Hoceima. Les communications <abbr title="Very High Frequency">VHF</abbr> entre la tour de contrôle et les aéronefs sont un pilier de la sécurité aérienne, reposant sur des équipements Telerad robustes mais dont la supervision est restée manuelle.  
+> Ce projet s'inscrit dans une démarche de modernisation des outils de maintenance du **Service Technique Navigation** de l'aéroport d'Al Hoceima. Les communications<p> <abbr title="Very High Frequency">VHF</abbr> </p>entre la tour de contrôle et les aéronefs sont un pilier de la sécurité aérienne, reposant sur des équipements Telerad robustes mais dont la supervision est restée manuelle.  
 
 ## La Problématique : De la Fiche Papier au Temps Réel
 > Jusqu'à présent, la vérification des paramètres critiques des équipements <abbr title="Very High Frequency">VHF</abbr> (température, puissance, ROS, etc.) s'effectuait physiquement dans la salle technique, avec un relevé manuel sur des fiches de contrôle.
