@@ -189,7 +189,6 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
     `
 3. **Configuration de la Base de Données**
 Avant de lancer l'application, la base de données `supervision_vhf` doit être créée et peuplée.
-    `
       # Connectez-vous à votre serveur MySQL en ligne de commande.
       # Remplacez 'votre_utilisateur_mysql' par votre nom d'utilisateur MySQL.
       mysql -u votre_utilisateur_mysql -p
@@ -210,7 +209,6 @@ Avant de lancer l'application, la base de données `supervision_vhf` doit être 
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_basculeurs.sql
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
-    `
 
     **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
 
@@ -220,7 +218,7 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
   1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`).
 
   2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
-    `
+   '
       # Fichier .env - Configuration de l'environnement
 
       # --- Base de données ---
@@ -233,8 +231,7 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
       # --- Simulateur Modbus ---
       SIMULATOR_HOST=localhost
       SIMULATOR_PORT=5020
-    `
-
+  '
 5. **Lancement de l'Application**
 L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
 
