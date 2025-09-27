@@ -132,7 +132,7 @@
   <tbody>
     <tr>
       <td>Interface Graphique</td>
-      <td><span class="badge">PySide6</span> <small>(Qt for Python)</small></td>
+      <td><span class="badge" style="display:inline-block; padding:6px 10px; border-radius:6px; background:#f1f5f9; color:#1f2937; font-family:monospace; font-size:13px; margin-right:6px;">PySide6</span> <small>(Qt for Python)</small></td>
       <td class="col-role">Création d'une application de bureau native et performante.</td>
     </tr>
     <tr>
