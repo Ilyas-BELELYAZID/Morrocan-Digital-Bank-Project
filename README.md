@@ -218,7 +218,7 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
   1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`).
 
   2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
-   <code>
+<code>
       # Fichier .env - Configuration de l'environnement
 
       # --- Base de données ---
@@ -231,7 +231,7 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
       # --- Simulateur Modbus ---
       SIMULATOR_HOST=localhost
       SIMULATOR_PORT=5020
-     </code>
+</code>
 5. **Lancement de l'Application**
 L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
 
