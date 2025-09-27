@@ -237,7 +237,7 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
 
 5. **Lancement de l'Application**
 L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
-    `
+
       # 1. Dans un premier terminal (avec l'environnement virtuel activé),
       # lancez le simulateur d'équipements. Il restera en attente de connexions.
       python simulateur_modbus.py
@@ -245,7 +245,7 @@ L'application fonctionne avec un simulateur Modbus pour permettre le développem
       # 2. Dans un second terminal (avec l'environnement virtuel également activé),
       # lancez l'application principale.
       python main.py
-    `
+
 Identifiants de connexion par défaut : `admin` / `admin`
 
 # AUTEUR
