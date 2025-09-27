@@ -113,50 +113,13 @@
 
 ## Technologies Utilisées
 
-<style>
-.table-vhf { border-collapse:collapse; width:100%; font-family: Inter, Arial, sans-serif; }
-.table-vhf thead th { background:#eef6fb; color:#153243; padding:12px 16px; text-align:left; font-weight:600; }
-.table-vhf td { padding:14px 16px; border-bottom:1px solid #eef3f7; vertical-align:top; }
-.badge { display:inline-block; padding:6px 10px; border-radius:6px; background:#f1f5f9; color:#1f2937; font-family:monospace; font-size:13px; margin-right:6px; }
-.col-role { color:#334155; }
-</style>
-
-<table class="table-vhf">
-  <thead>
-    <tr>
-      <th>Composant</th>
-      <th>Technologie</th>
-      <th>Rôle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Interface Graphique</td>
-      <td><span class="badge" style="display:inline-block; padding:6px 10px; border-radius:6px; background:#f1f5f9; color:#1f2937; font-family:monospace; font-size:13px; margin-right:6px;">PySide6</span> <small>(Qt for Python)</small></td>
-      <td class="col-role">Création d'une application de bureau native et performante.</td>
-    </tr>
-    <tr>
-      <td>Logique &amp; Contrôle</td>
-      <td><span class="badge">Python 3.13.7</span></td>
-      <td class="col-role">Langage principal pour sa simplicité et son écosystème riche.</td>
-    </tr>
-    <tr>
-      <td>Base de Données</td>
-      <td><span class="badge">MySQL</span></td>
-      <td class="col-role">Stockage persistant des utilisateurs, alertes et historique des événements.</td>
-    </tr>
-    <tr>
-      <td>Communication Matérielle</td>
-      <td><span class="badge">pymodbus</span></td>
-      <td class="col-role">Implémentation du protocole Modbus RTU (J-BUS) pour dialoguer avec les équipements via RS-485.</td>
-    </tr>
-    <tr>
-      <td>Asynchronisme</td>
-      <td><span class="badge">qasync</span> &amp; <span class="badge">asyncio</span></td>
-      <td class="col-role">Permet d'exécuter les tâches longues (requêtes réseau) sans jamais bloquer l'interface utilisateur.</td>
-    </tr>
-  </tbody>
-</table>
+| Composant                | Technologie                     | Rôle                                                                 |
+|--------------------------|----------------------------------|----------------------------------------------------------------------|
+| Interface Graphique      | PySide6 (Qt for Python)         | Création d'une application de bureau native et performante.          |
+| Logique & Contrôle       | Python 3.11+                    | Langage principal pour sa simplicité et son écosystème riche.        |
+| Base de Données          | MySQL                           | Stockage persistant des utilisateurs, alertes et historique.         |
+| Communication Matérielle | pymodbus                        | Implémentation Modbus RTU (J-BUS) via RS-485.                        |
+| Intelligence Artificielle| scikit-learn & pandas           | Analyse de données et détection d'anomalies.                        |
 
 # 🚀 INSTALLATION ET LANCEMENT
 Suivez ces étapes pour lancer l'application en mode développement avec le simulateur.
