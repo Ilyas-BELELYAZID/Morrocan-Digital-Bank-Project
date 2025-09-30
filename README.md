@@ -124,11 +124,12 @@
 Suivez ces étapes pour lancer l'application en mode développement avec le simulateur.
 
   1. **Prérequis**
-    - **Python 3.10+** (Version 3.13.7 recommandée pour ce projet);
 
-    - Un serveur **MySQL** (ou MariaDB) fonctionnel et accessible;
+    * **Python 3.10+** (Version 3.13.7 recommandée pour ce projet);
 
-    - **Git** pour cloner le projet.
+    * Un serveur **MySQL** (ou MariaDB) fonctionnel et accessible;
+
+    * **Git** pour cloner le projet.
 
   2. **Installation**
 
@@ -152,35 +153,35 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
   3. **Configuration de la Base de Données**
   Avant de lancer l'application, la base de données `supervision_vhf` doit être créée et peuplée.
 
-        # Connectez-vous à votre serveur MySQL en ligne de commande.
-        # Remplacez 'votre_utilisateur_mysql' par votre nom d'utilisateur MySQL.
-        mysql -u votre_utilisateur_mysql -p
+            # Connectez-vous à votre serveur MySQL en ligne de commande.
+            # Remplacez 'votre_utilisateur_mysql' par votre nom d'utilisateur MySQL.
+            mysql -u votre_utilisateur_mysql -p
 
-        # Une fois connecté, exécutez les commandes suivantes pour créer la base
-        # et l'utilisateur dédiés à l'application. Remplacez 'Onda@123'.
-        CREATE DATABASE supervision_vhf;
-        CREATE USER 'supervision_user'@'localhost' IDENTIFIED BY 'Onda@123';
-        GRANT ALL PRIVILEGES ON supervision_vhf.* TO 'supervision_user'@'localhost';
-        FLUSH PRIVILEGES;
-        EXIT;
+            # Une fois connecté, exécutez les commandes suivantes pour créer la base
+            # et l'utilisateur dédiés à l'application. Remplacez 'Onda@123'.
+            CREATE DATABASE supervision_vhf;
+            CREATE USER 'supervision_user'@'localhost' IDENTIFIED BY 'Onda@123';
+            GRANT ALL PRIVILEGES ON supervision_vhf.* TO 'supervision_user'@'localhost';
+            FLUSH PRIVILEGES;
+            EXIT;
 
-        # Maintenant, importez la structure des tables depuis les fichiers .sql fournis.
-        # Assurez-vous d'exécuter ces commandes depuis la racine de votre projet.
-        mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_users.sql
-        mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_emetteurs.sql
-        mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_recepteurs.sql
-        mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_basculeurs.sql
-        mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
-        mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
+            # Maintenant, importez la structure des tables depuis les fichiers .sql fournis.
+            # Assurez-vous d'exécuter ces commandes depuis la racine de votre projet.
+            mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_users.sql
+            mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_emetteurs.sql
+            mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_recepteurs.sql
+            mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_basculeurs.sql
+            mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
+            mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
 
   **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
 
   4. **Configuration de l'Environnement**
   Pour des raisons de sécurité, les informations sensibles comme les identifiants de la base de données ne sont pas stockées directement dans le code.
 
-    1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`);
+  1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`);
 
-    2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
+  2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
 
             # Fichier .env - Configuration de l'environnement
 
