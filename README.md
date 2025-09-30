@@ -20,20 +20,20 @@
 > Jusqu'à présent, la vérification des paramètres critiques des équipements <abbr title="Very High Frequency">VHF</abbr> (température, puissance, ROS, etc.) s'effectuait physiquement dans la salle technique, avec un relevé manuel sur des fiches de contrôle.
 **Cette méthode présentait plusieurs limitations :**
 
-- **Lenteur** : Un temps de réaction élevé en cas d'anomalie.
+- **Lenteur** : Un temps de réaction élevé en cas d'anomalie;
 
-- **Manque de vision globale** : Absence de centralisation des données et de vue d'ensemble.
+- **Manque de vision globale** : Absence de centralisation des données et de vue d'ensemble;
 
 - **Absence d'historique** : Difficulté à analyser les pannes passées et à identifier des tendances.
 
 ## La Solution : Une Supervision Centralisée et Intelligente
 > Cette application a été conçue pour répondre à ces enjeux en offrant une plateforme de supervision centralisée, temps réel et intelligente. Elle permet aux techniciens et ingénieurs de :
 
-- **Superviser** l'état de tous les équipements <abbr title="Very High Frequency">VHF</abbr> depuis un seul poste.
+- **Superviser** l'état de tous les équipements <abbr title="Very High Frequency">VHF</abbr> depuis un seul poste;
 
-- **Configurer** à distance les paramètres de fonctionnement.
+- **Configurer** à distance les paramètres de fonctionnement;
 
-- **Recevoir des alertes** sonores et visuelles instantanées en cas de défaillance ou d'anomalie.
+- **Recevoir des alertes** sonores et visuelles instantanées en cas de défaillance ou d'anomalie;
 
 - **Analyser** l'historique des données pour une maintenance proactive.
 
@@ -79,23 +79,23 @@
 # FONCTIONNALITÉS CLÉS
 > L'application est structurée en plusieurs modules accessibles depuis un menu latéral :
 
-  - 📊 **Tableau de Bord Principal :** Vue d'ensemble de l'état du système, des alertes en cours et des indicateurs de performance clés (<abbr title="Key Performance Indicator">KPIs</abbr>).
+  - 📊 **Tableau de Bord Principal :** Vue d'ensemble de l'état du système, des alertes en cours et des indicateurs de performance clés (<abbr title="Key Performance Indicator">KPIs</abbr>);
 
-  - 📡 **Module Émetteur (Tx) :** Supervision et configuration des émetteurs Telerad EM9000.
+  - 📡 **Module Émetteur (Tx) :** Supervision et configuration des émetteurs Telerad EM9000;
 
-    - **Supervision :** Fréquence, Puissance (W), <abbr title="Rapport d'Ondes Stationnaires">ROS</abbr>, Température (°C), Taux de Modulation (%), Tension (V).
+    - **Supervision :** Fréquence, Puissance (W), <abbr title="Rapport d'Ondes Stationnaires">ROS</abbr>, Température (°C), Taux de Modulation (%), Tension (V);
 
     - **Configuration :** Modification de la fréquence, réglage de la puissance, Modifier <abbr title="Taux De Modulation">TDM</abbr>, activation/désactivation.
 
-  - 📻 **Module Récepteur (Rx) :** Supervision et configuration des récepteurs Telerad RE9000.
+  - 📻 **Module Récepteur (Rx) :** Supervision et configuration des récepteurs Telerad RE9000;
 
-    - **Supervision :** Fréquence, Température (°C), Tension (V), Puissance <abbr title="Basse Fréquence">BF</abbr> (dBm), Seuil et état du Squelch, Tension (V).
+    - **Supervision :** Fréquence, Température (°C), Tension (V), Puissance <abbr title="Basse Fréquence">BF</abbr> (dBm), Seuil et état du Squelch, Tension (V);
 
     - **Configuration :** Changement de fréquence, ajustement du Squelch.
 
-  - 🔄 **Module Basculeur (N/S) :** Gestion de la redondance avec le Telerad BNS 9008.
+  - 🔄 **Module Basculeur (N/S) :** Gestion de la redondance avec le Telerad BNS 9008;
 
-    - **Supervision :** Voie active (Principal/Secours), Mode (Auto/Manuel), Cause du dernier basculement.
+    - **Supervision :** Voie active (Principal/Secours), Mode (Auto/Manuel), Cause du dernier basculement;
 
     - **Configuration :** Forcer le basculement manuel, activer/désactiver le mode automatique.
 
@@ -104,9 +104,9 @@
 # ARCHITECTURE TECHNIQUE
 > L'application est construite sur le patron d'architecture **(**<abbr title="Modèle-Vue-Contrôleur">**MVC**</abbr>**)**, garantissant une séparation nette entre la logique métier, l'interface utilisateur et la gestion des données.
 
-  - **Modèle (Model) :** Contient la logique métier, l'état des équipements, et gère la communication avec la base de données et les équipements via Modbus.
+  - **Modèle (Model) :** Contient la logique métier, l'état des équipements, et gère la communication avec la base de données et les équipements via Modbus;
 
-  - **Vue (View) :** L'interface graphique construite avec PySide6. Elle est passive et se contente d'afficher les informations du modèle et de capturer les actions de l'utilisateur.
+  - **Vue (View) :** L'interface graphique construite avec PySide6. Elle est passive et se contente d'afficher les informations du modèle et de capturer les actions de l'utilisateur;
 
   - **Contrôleur (Controller) :** Fait le lien entre la Vue et le Modèle. Il traite les actions de l'utilisateur et met à jour le modèle, qui à son tour notifie la vue des changements.
 
@@ -124,14 +124,15 @@
 Suivez ces étapes pour lancer l'application en mode développement avec le simulateur.
 
 1. **Prérequis**
-  * **Python 3.10+** (Version 3.13.7 recommandée pour ce projet).
+    - **Python 3.10+** (Version 3.13.7 recommandée pour ce projet);
 
-  * Un serveur **MySQL** (ou MariaDB) fonctionnel et accessible.
+    - Un serveur **MySQL** (ou MariaDB) fonctionnel et accessible;
 
-  * **Git** pour cloner le projet.
+    - **Git** pour cloner le projet.
 
 2. **Installation**
 
+    <code>
       # 1. Cloner le dépôt du projet sur votre machine locale
       git clone [https://votre-lien-vers-le-projet.git](https://votre-lien-vers-le-projet.git)
       cd votre-projet
@@ -148,10 +149,12 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
 
       # 4. Installer toutes les bibliothèques Python nécessaires en une seule commande
       pip install -r requirements.txt
+    </code>
 
 3. **Configuration de la Base de Données**
 Avant de lancer l'application, la base de données `supervision_vhf` doit être créée et peuplée.
 
+  <code>
       # Connectez-vous à votre serveur MySQL en ligne de commande.
       # Remplacez 'votre_utilisateur_mysql' par votre nom d'utilisateur MySQL.
       mysql -u votre_utilisateur_mysql -p
@@ -172,17 +175,18 @@ Avant de lancer l'application, la base de données `supervision_vhf` doit être 
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_basculeurs.sql
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
-
+  </code>
 
     **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
 
 4. **Configuration de l'Environnement**
 Pour des raisons de sécurité, les informations sensibles comme les identifiants de la base de données ne sont pas stockées directement dans le code.
 
-  1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`).
+  1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`);
 
   2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
 
+    <code>
       # Fichier .env - Configuration de l'environnement
 
       # --- Base de données ---
@@ -195,10 +199,11 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
       # --- Simulateur Modbus ---
       SIMULATOR_HOST=localhost
       SIMULATOR_PORT=5020
+    </code>
 
 5. **Lancement de l'Application**
 L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
-
+  <code>
       # 1. Dans un premier terminal (avec l'environnement virtuel activé),
       # lancez le simulateur d'équipements. Il restera en attente de connexions.
       python simulateur_modbus.py
@@ -206,7 +211,7 @@ L'application fonctionne avec un simulateur Modbus pour permettre le développem
       # 2. Dans un second terminal (avec l'environnement virtuel également activé),
       # lancez l'application principale.
       python main.py
-
+  </code>
 Identifiants de connexion par défaut : `admin` / `admin`
 
 # AUTEUR
