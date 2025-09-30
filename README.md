@@ -1,6 +1,5 @@
-# Morrocan-Digital-Bank-Project
 <div align="center">
-<img src="=https://upload.wikimedia.org/wikipedia/fr/thumb/c/c3/Office_national_des_a%25C3%25A9roports_logo.svg/1200px-Office_national_des_a%25C3%25A9roports_logo.svg.png" width="150"/>
+<img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/fr/thumb/c/c3/Office_national_des_a%25C3%25A9roports_logo.svg/1200px-Office_national_des_a%25C3%25A9roports_logo.svg.png" width="150"/>
 <h1>Application de Supervision des Équipements <abbr title="Very High Frequency">VHF</abbr></h1>
 <p>Une solution de monitoring et de configuration à distance pour les infrastructures de communication aéronautique.</p>
 <p><i>Projet réalisé dans le cadre d'un stage d'initiation au sein de l'Office National Des Aéroports (ONDA) - Aéroport Al Hoceima.</i></p>
@@ -15,7 +14,7 @@
 </div>
 
 # CONTEXTE DU PROJET
-> Ce projet s'inscrit dans une démarche de modernisation des outils de maintenance du **Service Technique Navigation** de l'aéroport d'Al Hoceima. Les communications<p> <abbr title="Very High Frequency">VHF</abbr> </p>entre la tour de contrôle et les aéronefs sont un pilier de la sécurité aérienne, reposant sur des équipements Telerad robustes mais dont la supervision est restée manuelle.  
+> Ce projet s'inscrit dans une démarche de modernisation des outils de maintenance du **Service Technique Navigation** de l'aéroport d'Al Hoceima. Les communications <abbr title="Very High Frequency">VHF</abbr> entre la tour de contrôle et les aéronefs sont un pilier de la sécurité aérienne, reposant sur des équipements Telerad robustes mais dont la supervision est restée manuelle.  
 
 ## La Problématique : De la Fiche Papier au Temps Réel
 > Jusqu'à présent, la vérification des paramètres critiques des équipements <abbr title="Very High Frequency">VHF</abbr> (température, puissance, ROS, etc.) s'effectuait physiquement dans la salle technique, avec un relevé manuel sur des fiches de contrôle.
@@ -119,7 +118,7 @@
 | Logique & Contrôle       | Python 3.11+                    | Langage principal pour sa simplicité et son écosystème riche.        |
 | Base de Données          | MySQL                           | Stockage persistant des utilisateurs, alertes et historique.         |
 | Communication Matérielle | pymodbus                        | Implémentation Modbus RTU (J-BUS) via RS-485.                        |
-| Intelligence Artificielle| scikit-learn & pandas           | Analyse de données et détection d'anomalies.                        |
+| Asynchronisme            | qasync & asyncio                | Permet d'exécuter les tâches longues (requêtes réseau) sans jamais bloquer l'interface utilisateur.   |
 
 # 🚀 INSTALLATION ET LANCEMENT
 Suivez ces étapes pour lancer l'application en mode développement avec le simulateur.
@@ -132,7 +131,7 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
   * **Git** pour cloner le projet.
 
 2. **Installation**
-    `
+
       # 1. Cloner le dépôt du projet sur votre machine locale
       git clone [https://votre-lien-vers-le-projet.git](https://votre-lien-vers-le-projet.git)
       cd votre-projet
@@ -149,9 +148,10 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
 
       # 4. Installer toutes les bibliothèques Python nécessaires en une seule commande
       pip install -r requirements.txt
-    `
+
 3. **Configuration de la Base de Données**
 Avant de lancer l'application, la base de données `supervision_vhf` doit être créée et peuplée.
+
       # Connectez-vous à votre serveur MySQL en ligne de commande.
       # Remplacez 'votre_utilisateur_mysql' par votre nom d'utilisateur MySQL.
       mysql -u votre_utilisateur_mysql -p
@@ -173,6 +173,7 @@ Avant de lancer l'application, la base de données `supervision_vhf` doit être 
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
       mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
 
+
     **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
 
 4. **Configuration de l'Environnement**
@@ -181,7 +182,7 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
   1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`).
 
   2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
-<code>
+
       # Fichier .env - Configuration de l'environnement
 
       # --- Base de données ---
@@ -194,7 +195,7 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
       # --- Simulateur Modbus ---
       SIMULATOR_HOST=localhost
       SIMULATOR_PORT=5020
-</code>
+
 5. **Lancement de l'Application**
 L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
 
