@@ -182,18 +182,18 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
       1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`);
       2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
 
-            # Fichier .env - Configuration de l'environnement
+                  # Fichier .env - Configuration de l'environnement
 
-            # --- Base de données ---
-            DB_HOST=localhost
-            DB_PORT=3306
-            DB_NAME=supervision_vhf
-            DB_USER=supervision_user
-            DB_PASSWORD=Onda@123
+                  # --- Base de données ---
+                  DB_HOST=localhost
+                  DB_PORT=3306
+                  DB_NAME=supervision_vhf
+                  DB_USER=supervision_user
+                  DB_PASSWORD=Onda@123
 
-            # --- Simulateur Modbus ---
-            SIMULATOR_HOST=localhost
-            SIMULATOR_PORT=5020
+                  # --- Simulateur Modbus ---
+                  SIMULATOR_HOST=localhost
+                  SIMULATOR_PORT=5020
 
   5. **Lancement de l'Application**
   L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
@@ -206,7 +206,7 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
             # lancez l'application principale.
             python main.py
 
-  Identifiants de connexion par défaut : `admin` / `admin`
+      Identifiants de connexion par défaut : `admin` / `admin`
 
 # AUTEUR
 **Ilyas BEL EL YAZID** - Étudiant Ingénieur en Transformation Digitale & Intelligence Artificielle.
