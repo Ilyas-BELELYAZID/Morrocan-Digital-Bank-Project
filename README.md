@@ -132,52 +132,52 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
 
 2. **Installation**
 
-    <code>
-      # 1. Cloner le dépôt du projet sur votre machine locale
-      git clone [https://votre-lien-vers-le-projet.git](https://votre-lien-vers-le-projet.git)
-      cd votre-projet
+  <code>
+    # 1. Cloner le dépôt du projet sur votre machine locale
+    git clone [https://votre-lien-vers-le-projet.git](https://votre-lien-vers-le-projet.git)
+    cd votre-projet
 
-      # 2. Créer un environnement virtuel pour isoler les dépendances du projet
-      # C'est une bonne pratique pour éviter les conflits de versions.
-      python -m venv venv
+    # 2. Créer un environnement virtuel pour isoler les dépendances du projet
+    # C'est une bonne pratique pour éviter les conflits de versions.
+    python -m venv venv
 
-      # 3. Activer l'environnement virtuel
-      # Sur Windows :
-      venv\Scripts\activate
-      # Sur macOS/Linux :
-      source venv/bin/activate
+    # 3. Activer l'environnement virtuel
+    # Sur Windows :
+    venv\Scripts\activate
+    # Sur macOS/Linux :
+    source venv/bin/activate
 
-      # 4. Installer toutes les bibliothèques Python nécessaires en une seule commande
-      pip install -r requirements.txt
-    </code>
+    # 4. Installer toutes les bibliothèques Python nécessaires en une seule commande
+    pip install -r requirements.txt
+  </code>
 
 3. **Configuration de la Base de Données**
 Avant de lancer l'application, la base de données `supervision_vhf` doit être créée et peuplée.
 
   <code>
-      # Connectez-vous à votre serveur MySQL en ligne de commande.
-      # Remplacez 'votre_utilisateur_mysql' par votre nom d'utilisateur MySQL.
-      mysql -u votre_utilisateur_mysql -p
+    # Connectez-vous à votre serveur MySQL en ligne de commande.
+    # Remplacez 'votre_utilisateur_mysql' par votre nom d'utilisateur MySQL.
+    mysql -u votre_utilisateur_mysql -p
 
-      # Une fois connecté, exécutez les commandes suivantes pour créer la base
-      # et l'utilisateur dédiés à l'application. Remplacez 'Onda@123'.
-      CREATE DATABASE supervision_vhf;
-      CREATE USER 'supervision_user'@'localhost' IDENTIFIED BY 'Onda@123';
-      GRANT ALL PRIVILEGES ON supervision_vhf.* TO 'supervision_user'@'localhost';
-      FLUSH PRIVILEGES;
-      EXIT;
+    # Une fois connecté, exécutez les commandes suivantes pour créer la base
+    # et l'utilisateur dédiés à l'application. Remplacez 'Onda@123'.
+    CREATE DATABASE supervision_vhf;
+    CREATE USER 'supervision_user'@'localhost' IDENTIFIED BY 'Onda@123';
+    GRANT ALL PRIVILEGES ON supervision_vhf.* TO 'supervision_user'@'localhost';
+    FLUSH PRIVILEGES;
+    EXIT;
 
-      # Maintenant, importez la structure des tables depuis les fichiers .sql fournis.
-      # Assurez-vous d'exécuter ces commandes depuis la racine de votre projet.
-      mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_users.sql
-      mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_emetteurs.sql
-      mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_recepteurs.sql
-      mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_basculeurs.sql
-      mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
-      mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
+    # Maintenant, importez la structure des tables depuis les fichiers .sql fournis.
+    # Assurez-vous d'exécuter ces commandes depuis la racine de votre projet.
+    mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_users.sql
+    mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_emetteurs.sql
+    mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_recepteurs.sql
+    mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_basculeurs.sql
+    mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
+    mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
   </code>
 
-    **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
+  **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
 
 4. **Configuration de l'Environnement**
 Pour des raisons de sécurité, les informations sensibles comme les identifiants de la base de données ne sont pas stockées directement dans le code.
@@ -199,9 +199,11 @@ Pour des raisons de sécurité, les informations sensibles comme les identifiant
       # --- Simulateur Modbus ---
       SIMULATOR_HOST=localhost
       SIMULATOR_PORT=5020
+    </code>
 
 5. **Lancement de l'Application**
 L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
+
   <code>
     # 1. Dans un premier terminal (avec l'environnement virtuel activé),
     # lancez le simulateur d'équipements. Il restera en attente de connexions.
@@ -210,6 +212,7 @@ L'application fonctionne avec un simulateur Modbus pour permettre le développem
     # 2. Dans un second terminal (avec l'environnement virtuel également activé),
     # lancez l'application principale.
     python main.py
+  </code>
 
 Identifiants de connexion par défaut : `admin` / `admin`
 
