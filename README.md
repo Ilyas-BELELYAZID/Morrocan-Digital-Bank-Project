@@ -174,14 +174,14 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
             mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_alertes.sql
             mysql -u supervision_user -p supervision_vhf < database/supervision_vhf_historique.sql
 
-  **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
+      **Alternative :** Vous pouvez également utiliser un outil graphique comme **MySQL Workbench** ou **DBeaver** pour exécuter le contenu de chaque fichier `.sql` du dossier `database/` directement dans l'éditeur de requêtes.
 
   4. **Configuration de l'Environnement**
   Pour des raisons de sécurité, les informations sensibles comme les identifiants de la base de données ne sont pas stockées directement dans le code.
 
-  1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`);
+    1. **Créez un fichier** `.env` à la racine du projet (au même niveau que `main.py`);
 
-  2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
+    2. **Copiez-collez le contenu suivant** dans votre fichier `.env` et adaptez les valeurs à votre configuration :
 
             # Fichier .env - Configuration de l'environnement
 
@@ -199,13 +199,13 @@ Suivez ces étapes pour lancer l'application en mode développement avec le simu
   5. **Lancement de l'Application**
   L'application fonctionne avec un simulateur Modbus pour permettre le développement sans matériel physique.
 
-          # 1. Dans un premier terminal (avec l'environnement virtuel activé),
-          # lancez le simulateur d'équipements. Il restera en attente de connexions.
-          python simulateur_modbus.py
+            # 1. Dans un premier terminal (avec l'environnement virtuel activé),
+            # lancez le simulateur d'équipements. Il restera en attente de connexions.
+            python simulateur_modbus.py
 
-          # 2. Dans un second terminal (avec l'environnement virtuel également activé),
-          # lancez l'application principale.
-          python main.py
+            # 2. Dans un second terminal (avec l'environnement virtuel également activé),
+            # lancez l'application principale.
+            python main.py
 
   Identifiants de connexion par défaut : `admin` / `admin`
 
