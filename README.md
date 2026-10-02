@@ -4,20 +4,6 @@ A modern e-banking platform prototype with a focus on secure, intuitive QR code-
 
 ---
 
-## 📋 Table of Contents
-
-- [Project Overview](#project-overview)
-- [Core Challenge](#core-challenge)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Technology Stack](#technology-stack)
-- [File-by-File Technical Breakdown](#file-by-file-technical-breakdown)
-- [Getting Started](#getting-started)
-- [Roadmap & Future Enhancements](#roadmap--future-enhancements)
-- [Contributing](#contributing)
-
----
-
 ## 📱 Project Overview
 
 **E-banking** refers to banking services accessible via the internet or mobile applications, enabling customers to manage accounts and perform remote transactions from anywhere, at any time.
